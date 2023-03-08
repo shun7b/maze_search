@@ -1,0 +1,242 @@
+/*declare subs{
+    input data_in_index[240],data_in[240];
+    output data_in_index_out[240];
+    func_in subs_exe(data_in_index,data_in):data_in_index_out;
+}*/
+#include "macro.inc"
+%i "subs.inc"
+%i "sub_plot.inc"
+module subs{
+    sub_plot sub_plot_x[210];
+    reg sub_reg[10]=10'b0;
+	func subs_exe{	
+
+		sub_plot_x[0].in_do(data_in33,data_in_index33);
+		sub_plot_x[1].in_do(data_in35,data_in_index35);
+		sub_plot_x[2].in_do(data_in37,data_in_index37);
+		sub_plot_x[3].in_do(data_in39,data_in_index39);
+		sub_plot_x[4].in_do(data_in41,data_in_index41);
+		sub_plot_x[5].in_do(data_in43,data_in_index43);
+		sub_plot_x[6].in_do(data_in45,data_in_index45);
+		sub_plot_x[7].in_do(data_in47,data_in_index47);
+		sub_plot_x[8].in_do(data_in49,data_in_index49);
+		sub_plot_x[9].in_do(data_in51,data_in_index51);
+		sub_plot_x[10].in_do(data_in53,data_in_index53);
+		sub_plot_x[11].in_do(data_in55,data_in_index55);
+		sub_plot_x[12].in_do(data_in57,data_in_index57);
+		sub_plot_x[13].in_do(data_in59,data_in_index59);
+		sub_plot_x[14].in_do(data_in61,data_in_index61);
+
+		sub_plot_x[15].in_do(data_in65,data_in_index65);
+		sub_plot_x[16].in_do(data_in67,data_in_index67);
+		sub_plot_x[17].in_do(data_in69,data_in_index69);
+		sub_plot_x[18].in_do(data_in71,data_in_index71);
+		sub_plot_x[19].in_do(data_in73,data_in_index73);
+		sub_plot_x[20].in_do(data_in75,data_in_index75);
+		sub_plot_x[21].in_do(data_in77,data_in_index77);
+		sub_plot_x[22].in_do(data_in79,data_in_index79);
+		sub_plot_x[23].in_do(data_in81,data_in_index81);
+		sub_plot_x[24].in_do(data_in83,data_in_index83);
+		sub_plot_x[25].in_do(data_in85,data_in_index85);
+		sub_plot_x[26].in_do(data_in87,data_in_index87);
+		sub_plot_x[27].in_do(data_in89,data_in_index89);
+		sub_plot_x[28].in_do(data_in91,data_in_index91);
+		sub_plot_x[29].in_do(data_in93,data_in_index93);
+
+		sub_plot_x[30].in_do(data_in97,data_in_index97);
+		sub_plot_x[31].in_do(data_in99,data_in_index99);
+		sub_plot_x[32].in_do(data_in101,data_in_index101);
+		sub_plot_x[33].in_do(data_in103,data_in_index103);
+		sub_plot_x[34].in_do(data_in105,data_in_index105);
+		sub_plot_x[35].in_do(data_in107,data_in_index107);
+		sub_plot_x[36].in_do(data_in109,data_in_index109);
+		sub_plot_x[37].in_do(data_in111,data_in_index111);
+		sub_plot_x[38].in_do(data_in113,data_in_index113);
+		sub_plot_x[39].in_do(data_in115,data_in_index115);
+		sub_plot_x[40].in_do(data_in117,data_in_index117);
+		sub_plot_x[41].in_do(data_in119,data_in_index119);
+		sub_plot_x[42].in_do(data_in121,data_in_index121);
+		sub_plot_x[43].in_do(data_in123,data_in_index123);
+		sub_plot_x[44].in_do(data_in125,data_in_index125);
+
+		sub_plot_x[45].in_do(data_in129,data_in_index129);
+		sub_plot_x[46].in_do(data_in131,data_in_index131);
+		sub_plot_x[47].in_do(data_in133,data_in_index133);
+		sub_plot_x[48].in_do(data_in135,data_in_index135);
+		sub_plot_x[49].in_do(data_in137,data_in_index137);
+		sub_plot_x[50].in_do(data_in139,data_in_index139);
+		sub_plot_x[51].in_do(data_in141,data_in_index141);
+		sub_plot_x[52].in_do(data_in143,data_in_index143);
+		sub_plot_x[53].in_do(data_in145,data_in_index145);
+		sub_plot_x[54].in_do(data_in147,data_in_index147);
+		sub_plot_x[55].in_do(data_in149,data_in_index149);
+		sub_plot_x[56].in_do(data_in151,data_in_index151);
+		sub_plot_x[57].in_do(data_in153,data_in_index153);
+		sub_plot_x[58].in_do(data_in155,data_in_index155);
+		sub_plot_x[59].in_do(data_in157,data_in_index157);
+
+		sub_plot_x[60].in_do(data_in161,data_in_index161);
+		sub_plot_x[61].in_do(data_in163,data_in_index163);
+		sub_plot_x[62].in_do(data_in165,data_in_index165);
+		sub_plot_x[63].in_do(data_in167,data_in_index167);
+		sub_plot_x[64].in_do(data_in169,data_in_index169);
+		sub_plot_x[65].in_do(data_in171,data_in_index171);
+		sub_plot_x[66].in_do(data_in173,data_in_index173);
+		sub_plot_x[67].in_do(data_in175,data_in_index175);
+		sub_plot_x[68].in_do(data_in177,data_in_index177);
+		sub_plot_x[69].in_do(data_in179,data_in_index179);
+		sub_plot_x[70].in_do(data_in181,data_in_index181);
+		sub_plot_x[71].in_do(data_in183,data_in_index183);
+		sub_plot_x[72].in_do(data_in185,data_in_index185);
+		sub_plot_x[73].in_do(data_in187,data_in_index187);
+		sub_plot_x[74].in_do(data_in189,data_in_index189);
+
+		sub_plot_x[75].in_do(data_in193,data_in_index193);
+		sub_plot_x[76].in_do(data_in195,data_in_index195);
+		sub_plot_x[77].in_do(data_in197,data_in_index197);
+		sub_plot_x[78].in_do(data_in199,data_in_index199);
+		sub_plot_x[79].in_do(data_in201,data_in_index201);
+		sub_plot_x[80].in_do(data_in203,data_in_index203);
+		sub_plot_x[81].in_do(data_in205,data_in_index205);
+		sub_plot_x[82].in_do(data_in207,data_in_index207);
+		sub_plot_x[83].in_do(data_in209,data_in_index209);
+		sub_plot_x[84].in_do(data_in211,data_in_index211);
+		sub_plot_x[85].in_do(data_in213,data_in_index213);
+		sub_plot_x[86].in_do(data_in215,data_in_index215);
+		sub_plot_x[87].in_do(data_in217,data_in_index217);
+		sub_plot_x[88].in_do(data_in219,data_in_index219);
+		sub_plot_x[89].in_do(data_in221,data_in_index221);
+
+		sub_plot_x[90].in_do(data_in225,data_in_index225);
+		sub_plot_x[91].in_do(data_in227,data_in_index227);
+		sub_plot_x[92].in_do(data_in229,data_in_index229);
+		sub_plot_x[93].in_do(data_in231,data_in_index231);
+		sub_plot_x[94].in_do(data_in233,data_in_index233);
+		sub_plot_x[95].in_do(data_in235,data_in_index235);
+		sub_plot_x[96].in_do(data_in237,data_in_index237);
+		sub_plot_x[97].in_do(data_in239,data_in_index239);
+		sub_plot_x[98].in_do(data_in241,data_in_index241);
+		sub_plot_x[99].in_do(data_in243,data_in_index243);
+		sub_plot_x[100].in_do(data_in245,data_in_index245);
+		sub_plot_x[101].in_do(data_in247,data_in_index247);
+		sub_plot_x[102].in_do(data_in249,data_in_index249);
+		sub_plot_x[103].in_do(data_in251,data_in_index251);
+		sub_plot_x[104].in_do(data_in253,data_in_index253);
+
+		sub_plot_x[105].in_do(data_in257,data_in_index257);
+		sub_plot_x[106].in_do(data_in259,data_in_index259);
+		sub_plot_x[107].in_do(data_in261,data_in_index261);
+		sub_plot_x[108].in_do(data_in263,data_in_index263);
+		sub_plot_x[109].in_do(data_in265,data_in_index265);
+		sub_plot_x[110].in_do(data_in267,data_in_index267);
+		sub_plot_x[111].in_do(data_in269,data_in_index269);
+		sub_plot_x[112].in_do(data_in271,data_in_index271);
+		sub_plot_x[113].in_do(data_in273,data_in_index273);
+		sub_plot_x[114].in_do(data_in275,data_in_index275);
+		sub_plot_x[115].in_do(data_in277,data_in_index277);
+		sub_plot_x[116].in_do(data_in279,data_in_index279);
+		sub_plot_x[117].in_do(data_in281,data_in_index281);
+		sub_plot_x[118].in_do(data_in283,data_in_index283);
+		sub_plot_x[119].in_do(data_in285,data_in_index285);
+
+		sub_plot_x[120].in_do(data_in289,data_in_index289);
+		sub_plot_x[121].in_do(data_in291,data_in_index291);
+		sub_plot_x[122].in_do(data_in293,data_in_index293);
+		sub_plot_x[123].in_do(data_in295,data_in_index295);
+		sub_plot_x[124].in_do(data_in297,data_in_index297);
+		sub_plot_x[125].in_do(data_in299,data_in_index299);
+		sub_plot_x[126].in_do(data_in301,data_in_index301);
+		sub_plot_x[127].in_do(data_in303,data_in_index303);
+		sub_plot_x[128].in_do(data_in305,data_in_index305);
+		sub_plot_x[129].in_do(data_in307,data_in_index307);
+		sub_plot_x[130].in_do(data_in309,data_in_index309);
+		sub_plot_x[131].in_do(data_in311,data_in_index311);
+		sub_plot_x[132].in_do(data_in313,data_in_index313);
+		sub_plot_x[133].in_do(data_in315,data_in_index315);
+		sub_plot_x[134].in_do(data_in317,data_in_index317);
+
+		sub_plot_x[135].in_do(data_in321,data_in_index321);
+		sub_plot_x[136].in_do(data_in323,data_in_index323);
+		sub_plot_x[137].in_do(data_in325,data_in_index325);
+		sub_plot_x[138].in_do(data_in327,data_in_index327);
+		sub_plot_x[139].in_do(data_in329,data_in_index329);
+		sub_plot_x[140].in_do(data_in331,data_in_index331);
+		sub_plot_x[141].in_do(data_in333,data_in_index333);
+		sub_plot_x[142].in_do(data_in335,data_in_index335);
+		sub_plot_x[143].in_do(data_in337,data_in_index337);
+		sub_plot_x[144].in_do(data_in339,data_in_index339);
+		sub_plot_x[145].in_do(data_in341,data_in_index341);
+		sub_plot_x[146].in_do(data_in343,data_in_index343);
+		sub_plot_x[147].in_do(data_in345,data_in_index345);
+		sub_plot_x[148].in_do(data_in347,data_in_index347);
+		sub_plot_x[149].in_do(data_in349,data_in_index349);
+
+		sub_plot_x[150].in_do(data_in353,data_in_index353);
+		sub_plot_x[151].in_do(data_in355,data_in_index355);
+		sub_plot_x[152].in_do(data_in357,data_in_index357);
+		sub_plot_x[153].in_do(data_in359,data_in_index359);
+		sub_plot_x[154].in_do(data_in361,data_in_index361);
+		sub_plot_x[155].in_do(data_in363,data_in_index363);
+		sub_plot_x[156].in_do(data_in365,data_in_index365);
+		sub_plot_x[157].in_do(data_in367,data_in_index367);
+		sub_plot_x[158].in_do(data_in369,data_in_index369);
+		sub_plot_x[159].in_do(data_in371,data_in_index371);
+		sub_plot_x[160].in_do(data_in373,data_in_index373);
+		sub_plot_x[161].in_do(data_in375,data_in_index375);
+		sub_plot_x[162].in_do(data_in377,data_in_index377);
+		sub_plot_x[163].in_do(data_in379,data_in_index379);
+		sub_plot_x[164].in_do(data_in381,data_in_index381);
+
+		sub_plot_x[165].in_do(data_in385,data_in_index385);
+		sub_plot_x[166].in_do(data_in387,data_in_index387);
+		sub_plot_x[167].in_do(data_in389,data_in_index389);
+		sub_plot_x[168].in_do(data_in391,data_in_index391);
+		sub_plot_x[169].in_do(data_in393,data_in_index393);
+		sub_plot_x[170].in_do(data_in395,data_in_index395);
+		sub_plot_x[171].in_do(data_in397,data_in_index397);
+		sub_plot_x[172].in_do(data_in399,data_in_index399);
+		sub_plot_x[173].in_do(data_in401,data_in_index401);
+		sub_plot_x[174].in_do(data_in403,data_in_index403);
+		sub_plot_x[175].in_do(data_in405,data_in_index405);
+		sub_plot_x[176].in_do(data_in407,data_in_index407);
+		sub_plot_x[177].in_do(data_in409,data_in_index409);
+		sub_plot_x[178].in_do(data_in411,data_in_index411);
+		sub_plot_x[179].in_do(data_in413,data_in_index413);
+
+		sub_plot_x[180].in_do(data_in417,data_in_index417);
+		sub_plot_x[181].in_do(data_in419,data_in_index419);
+		sub_plot_x[182].in_do(data_in421,data_in_index421);
+		sub_plot_x[183].in_do(data_in423,data_in_index423);
+		sub_plot_x[184].in_do(data_in425,data_in_index425);
+		sub_plot_x[185].in_do(data_in427,data_in_index427);
+		sub_plot_x[186].in_do(data_in429,data_in_index429);
+		sub_plot_x[187].in_do(data_in431,data_in_index431);
+		sub_plot_x[188].in_do(data_in433,data_in_index433);
+		sub_plot_x[189].in_do(data_in435,data_in_index435);
+		sub_plot_x[190].in_do(data_in437,data_in_index437);
+		sub_plot_x[191].in_do(data_in439,data_in_index439);
+		sub_plot_x[192].in_do(data_in441,data_in_index441);
+		sub_plot_x[193].in_do(data_in443,data_in_index443);
+		sub_plot_x[194].in_do(data_in445,data_in_index445);
+
+		sub_plot_x[195].in_do(data_in449,data_in_index449);
+		sub_plot_x[196].in_do(data_in451,data_in_index451);
+		sub_plot_x[197].in_do(data_in453,data_in_index453);
+		sub_plot_x[198].in_do(data_in455,data_in_index455);
+		sub_plot_x[199].in_do(data_in457,data_in_index457);
+		sub_plot_x[200].in_do(data_in459,data_in_index459);
+		sub_plot_x[201].in_do(data_in461,data_in_index461);
+		sub_plot_x[202].in_do(data_in463,data_in_index463);
+		sub_plot_x[203].in_do(data_in465,data_in_index465);
+		sub_plot_x[204].in_do(data_in467,data_in_index467);
+		sub_plot_x[205].in_do(data_in469,data_in_index469);
+		sub_plot_x[206].in_do(data_in471,data_in_index471);
+		sub_plot_x[207].in_do(data_in473,data_in_index473);
+		sub_plot_x[208].in_do(data_in475,data_in_index475);
+		sub_plot_x[209].in_do(data_in477,data_in_index477);
+
+
+         sub_reg:=sub_plot_x[0].sa|sub_plot_x[1].sa|sub_plot_x[2].sa|sub_plot_x[3].sa|sub_plot_x[4].sa|sub_plot_x[5].sa|sub_plot_x[6].sa|sub_plot_x[7].sa|sub_plot_x[8].sa|sub_plot_x[9].sa|sub_plot_x[10].sa|sub_plot_x[11].sa|sub_plot_x[12].sa|sub_plot_x[13].sa|sub_plot_x[14].sa|sub_plot_x[15].sa|sub_plot_x[16].sa|sub_plot_x[17].sa|sub_plot_x[18].sa|sub_plot_x[19].sa|sub_plot_x[20].sa|sub_plot_x[21].sa|sub_plot_x[22].sa|sub_plot_x[23].sa|sub_plot_x[24].sa|sub_plot_x[25].sa|sub_plot_x[26].sa|sub_plot_x[27].sa|sub_plot_x[28].sa|sub_plot_x[29].sa|sub_plot_x[30].sa|sub_plot_x[31].sa|sub_plot_x[32].sa|sub_plot_x[33].sa|sub_plot_x[34].sa|sub_plot_x[35].sa|sub_plot_x[36].sa|sub_plot_x[37].sa|sub_plot_x[38].sa|sub_plot_x[39].sa|sub_plot_x[40].sa|sub_plot_x[41].sa|sub_plot_x[42].sa|sub_plot_x[43].sa|sub_plot_x[44].sa|sub_plot_x[45].sa|sub_plot_x[46].sa|sub_plot_x[47].sa|sub_plot_x[48].sa|sub_plot_x[49].sa|sub_plot_x[50].sa|sub_plot_x[51].sa|sub_plot_x[52].sa|sub_plot_x[53].sa|sub_plot_x[54].sa|sub_plot_x[55].sa|sub_plot_x[56].sa|sub_plot_x[57].sa|sub_plot_x[58].sa|sub_plot_x[59].sa|sub_plot_x[60].sa|sub_plot_x[61].sa|sub_plot_x[62].sa|sub_plot_x[63].sa|sub_plot_x[64].sa|sub_plot_x[65].sa|sub_plot_x[66].sa|sub_plot_x[67].sa|sub_plot_x[68].sa|sub_plot_x[69].sa|sub_plot_x[70].sa|sub_plot_x[71].sa|sub_plot_x[72].sa|sub_plot_x[73].sa|sub_plot_x[74].sa|sub_plot_x[75].sa|sub_plot_x[76].sa|sub_plot_x[77].sa|sub_plot_x[78].sa|sub_plot_x[79].sa|sub_plot_x[80].sa|sub_plot_x[81].sa|sub_plot_x[82].sa|sub_plot_x[83].sa|sub_plot_x[84].sa|sub_plot_x[85].sa|sub_plot_x[86].sa|sub_plot_x[87].sa|sub_plot_x[88].sa|sub_plot_x[89].sa|sub_plot_x[90].sa|sub_plot_x[91].sa|sub_plot_x[92].sa|sub_plot_x[93].sa|sub_plot_x[94].sa|sub_plot_x[95].sa|sub_plot_x[96].sa|sub_plot_x[97].sa|sub_plot_x[98].sa|sub_plot_x[99].sa|sub_plot_x[100].sa|sub_plot_x[101].sa|sub_plot_x[102].sa|sub_plot_x[103].sa|sub_plot_x[104].sa|sub_plot_x[105].sa|sub_plot_x[106].sa|sub_plot_x[107].sa|sub_plot_x[108].sa|sub_plot_x[109].sa|sub_plot_x[110].sa|sub_plot_x[111].sa|sub_plot_x[112].sa|sub_plot_x[113].sa|sub_plot_x[114].sa|sub_plot_x[115].sa|sub_plot_x[116].sa|sub_plot_x[117].sa|sub_plot_x[118].sa|sub_plot_x[119].sa|sub_plot_x[120].sa|sub_plot_x[121].sa|sub_plot_x[122].sa|sub_plot_x[123].sa|sub_plot_x[124].sa|sub_plot_x[125].sa|sub_plot_x[126].sa|sub_plot_x[127].sa|sub_plot_x[128].sa|sub_plot_x[129].sa|sub_plot_x[130].sa|sub_plot_x[131].sa|sub_plot_x[132].sa|sub_plot_x[133].sa|sub_plot_x[134].sa|sub_plot_x[135].sa|sub_plot_x[136].sa|sub_plot_x[137].sa|sub_plot_x[138].sa|sub_plot_x[139].sa|sub_plot_x[140].sa|sub_plot_x[141].sa|sub_plot_x[142].sa|sub_plot_x[143].sa|sub_plot_x[144].sa|sub_plot_x[145].sa|sub_plot_x[146].sa|sub_plot_x[147].sa|sub_plot_x[148].sa|sub_plot_x[149].sa|sub_plot_x[150].sa|sub_plot_x[151].sa|sub_plot_x[152].sa|sub_plot_x[153].sa|sub_plot_x[154].sa|sub_plot_x[155].sa|sub_plot_x[156].sa|sub_plot_x[157].sa|sub_plot_x[158].sa|sub_plot_x[159].sa|sub_plot_x[160].sa|sub_plot_x[161].sa|sub_plot_x[162].sa|sub_plot_x[163].sa|sub_plot_x[164].sa|sub_plot_x[165].sa|sub_plot_x[166].sa|sub_plot_x[167].sa|sub_plot_x[168].sa|sub_plot_x[169].sa|sub_plot_x[170].sa|sub_plot_x[171].sa|sub_plot_x[172].sa|sub_plot_x[173].sa|sub_plot_x[174].sa|sub_plot_x[175].sa|sub_plot_x[176].sa|sub_plot_x[177].sa|sub_plot_x[178].sa|sub_plot_x[179].sa|sub_plot_x[180].sa|sub_plot_x[181].sa|sub_plot_x[182].sa|sub_plot_x[183].sa|sub_plot_x[184].sa|sub_plot_x[185].sa|sub_plot_x[186].sa|sub_plot_x[187].sa|sub_plot_x[188].sa|sub_plot_x[189].sa|sub_plot_x[190].sa|sub_plot_x[191].sa|sub_plot_x[192].sa|sub_plot_x[193].sa|sub_plot_x[194].sa|sub_plot_x[195].sa|sub_plot_x[196].sa|sub_plot_x[197].sa|sub_plot_x[198].sa|sub_plot_x[199].sa|sub_plot_x[200].sa|sub_plot_x[201].sa|sub_plot_x[202].sa|sub_plot_x[203].sa|sub_plot_x[204].sa|sub_plot_x[205].sa|sub_plot_x[206].sa|sub_plot_x[207].sa|sub_plot_x[208].sa|sub_plot_x[209].sa;
+    }
+     sub_array_out=sub_reg;
+}

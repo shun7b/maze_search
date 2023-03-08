@@ -1,0 +1,8 @@
+#include "macro.inc"
+#include"meiro.inc"
+#include"test.inc"
+#include"mul_bit.inc"
+module test{
+    mul_bit mul_bit_x[2];
+    meiro meirotest;
+    mem map_test[512][BIT]={ 

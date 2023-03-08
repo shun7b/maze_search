@@ -1,0 +1,27 @@
+#include "macro.inc"
+%i "seach_block.inc"
+module seach_block{
+    reg data_reg[BIT]=10'b0;
+    data_out=data_reg;
+    
+    func in_do{
+        if(map_block==BIT'((BIT-1)#(1'b1))){
+            start=now;
+            goal=10'b0;
+        }
+        if(map_block==BIT'b0){
+            start=10'b0;
+            goal=now;
+        }
+        if(map_block[BIT-1]==0b1){
+            start=10'b0;
+            goal=10'b0;
+        }
+        if(map_block[BIT-2:BIT-3]==0b10){
+            start=10'b0;
+            goal=10'b0;
+        
+        }
+        data_reg:=map_block;   
+    }
+}
