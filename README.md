@@ -1,3 +1,3 @@
 # maze_search
-make 
+make <br>
 make clean
