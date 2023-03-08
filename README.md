@@ -4,5 +4,4 @@ make clean
 <br>
 NSL core<br>
 <br>
-GTKWAVE<br>
-iverilog<br>
+
